@@ -1,4 +1,49 @@
-table,td,th{
-    border: 2px solid black;
-    
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    height: 70px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header p{
+    color: aliceblue;
+    font-size: 25px;
+    margin: 25px;
+    cursor: pointer;
+}
+.header ul li{
+    display: inline-block;
+    margin: 0px 18px;
+    list-style: none;
+
+}
+
+.header ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.header ul li ::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: aqua;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.header ul li :hover:after{
+    width: 100%;
 }
